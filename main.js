@@ -118,6 +118,7 @@ function launchGame() {
     computerMsg.style.display = "none";
     resetBtn.style.display = "none";
     winnerMsg.textContent = "Battleship";
+    startGameBtn.style.pointerEvents = "none";
     launchGame();
   }
   let gridItems1 = document.querySelectorAll(".player > div.items");
@@ -149,6 +150,7 @@ function launchGame() {
     player.shipArray.forEach((e) => {
       gridItems1[e].style.backgroundColor = "#7d7d7d";
     });
+    startGameBtn.style.pointerEvents = "auto";
     startGameBtn.addEventListener("click", function () {
       btnContainer.style.display = "none";
       grid2.style.display = "grid";
